@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -51,15 +52,19 @@ android {
 
 dependencies {
 
+    // Navigation
+    implementation("androidx.navigation:navigation-compose:2.7.4")
+
+
     //Compose ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.3")
 
     //Network Calls
    //implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:retrofit:2.11.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
 
     //Json to Kotlin mapping
+    implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
     //implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
     //Image Loading
